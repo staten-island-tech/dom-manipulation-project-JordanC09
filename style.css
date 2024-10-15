@@ -7,4 +7,19 @@ html,body,*{
 }
 body{
     text-align: center;
+    background-image: url("images/BRUH.jpg");
 }
+h1{
+    font-size: 70px;
+}
+#txt{
+    font-size: 30px;
+}
+.top{
+    background-color: rgba(248,209,56,255);
+}
+.line-text{
+    font-size: 40px
+}
+/* #213738
+#f14848 */

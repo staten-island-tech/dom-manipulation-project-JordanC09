@@ -10,9 +10,20 @@ const DOMSelectors = {
   card: document.querySelector(".card"),
 };
 console.log(DOMSelectors.text);
-function backgroundandtext(background, text) {
+
+/*DOMSelectors.button.addEventListener("click", function (event) {
+  console.log(event.target.parentElement);
+  event.target.parentElement.style.backgroundColor = "red";
+});*/
+
+DOMSelectors.form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  console.log(document.querySelector("input").value);
+});
+
+/*function backgroundandtext(background, text) {
   background.style.backgroundColor = "blue";
   text.style.fontSize = "50px";
 }
 
-backgroundandtext(DOMSelectors.body, DOMSelectors.text);
+backgroundandtext(DOMSelectors.body, DOMSelectors.text);*/
