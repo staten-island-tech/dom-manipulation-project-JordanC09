@@ -14,16 +14,38 @@
     <div class="inputs-div">
       <h2 class="line-text">Enter Name</h2>
       <form action="" class="form">
-        <input type="text" />
-        <button type="submit" class="btn">submit</button>
+        <input type="text" id="name-input" placeholder="Enter Name" required />
+
+        <h2 class="line-text">Enter Description</h2>
+        <input
+          type="text"
+          id="Desc-input"
+          placeholder="Enter Description"
+          required
+        />
+
+        <h2 class="line-text">Enter Image URL</h2>
+        <input
+          type="text"
+          id="Image-input"
+          placeholder="Enter Image URL"
+          required
+        />
+
+        <h2 class="line-text">Enter Background Color</h2>
+        <input
+          type="text"
+          id="Color-input"
+          placeholder="Enter rgba Color value"
+          required
+        />
+        <div>
+          <button type="submit" class="btn">submit</button>
+        </div>
       </form>
     </div>
 
-    <div class="container">
-      <div class="cards">
-        <!-- <h2 class="cardheader">SomeText</h2> -->
-      </div>
-    </div>
+    <div class="container"></div>
 
     <script src="index.js"></script>
   </body>

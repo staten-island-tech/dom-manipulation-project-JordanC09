@@ -19,7 +19,25 @@ h1{
     background-color: rgba(248,209,56,255);
 }
 .line-text{
-    font-size: 40px
+    font-size: 30px
 }
+input{
+    height: 25px;
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* #213738
 #f14848 */
