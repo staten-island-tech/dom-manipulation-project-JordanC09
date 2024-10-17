@@ -7,14 +7,15 @@ const DOMSelectors = {
   button: document.querySelector(".btn"),
   form: document.querySelector(".form"),
   container: document.querySelector(".container"),
-  card: document.querySelector(".card"),
+  
 
-  NameInput: document.getELementsByID("name-input"),
-  DescInput: document.getELementsByID("Desc-input"),
-  ImageInput: document.getELementsByID("Image-input"),
-  ColorInput: document.getELementsByID("Color-input"),
+  NameInput: document.getElementsByID("name-input"),
+  DescInput: document.getElementsByID("Desc-input"),
+  ImageInput: document.getElementsByID("Image-input"),
+  ColorInput: document.getElementsByID("Color-input"),
 };
 console.log(DOMSelectors.text);
+let id = 0
 
 function makecard(event) {
   event.preventDefault();
@@ -24,14 +25,24 @@ function makecard(event) {
   let color = DOMSelectors.ColorInput.value;
 
   DOMSelectors.container.insertAdjacentHTML(
+    id += 1,
     "beforeend",
     `
-    <div class = "card">
+    <div class = "card" id = "${id}">
     <h2 class = "card-header"> ${name} </h2>
     <img src"${image}" alt="image made" class = "card-image">
+    <p>${desc}</p>
+
     
     `
   );
+  let cardcolor = document.getElementById(id);
+  cardcolor.style.backgroundColor = color
+}
+
+function remove(event){
+  event.preventDefault();
+  document.querySelector(".card").remove();
 }
 
 /*DOMSelectors.button.addEventListener("click", function (event) {
@@ -43,6 +54,11 @@ DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
   console.log(document.querySelector("input").value);
 });
+
+DOMSelectors.form.addEventListener("submit", function (event){
+  event.preventDefault();
+  makecard(event);
+})
 
 /*function backgroundandtext(background, text) {
   background.style.backgroundColor = "blue";
